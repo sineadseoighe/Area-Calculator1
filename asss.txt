@@ -1,0 +1,98 @@
+#include<stdio.h>
+#include"stdafx.h"
+
+#define triangle 1
+#define square 2
+#define rectangle 3
+#define parallelogram 4
+#define trapezoid 5
+#define circle 6
+#define Ellipse 7
+#define Sector 8
+
+void main()
+{
+	int choice;
+
+	printf("Area Calculator\n Enter choice:\n1, triangle\n2, square\n3, rectangle\n4, parallelogram\n5, Trapezoid\n6, circle\n7, Ellipse\n8, sector\n,");
+	scanf_s("%d",&choice);
+
+	float base = 0;
+	float height=0;
+	float area=0;
+	float length = 0;
+	float width = 0;
+	float a = 0;
+	float b = 0;
+	float radius = 0;
+	float angleInRadians = 0;
+	switch (choice)
+
+	{
+	case 1:
+		printf("Enter length of base:/n");
+		scanf_s("%f", &base);
+		printf("Enter  vertical height:/n");
+		scanf_s("%f", &height);
+
+		 area = (base*height*.5);
+		printf("Area= %f", area);
+		break;
+	case 2:
+		printf("Enter length of side:\n");
+		scanf_s("%f", &length);
+		area = length*length;
+		printf("Area=%f", area);
+		break;
+
+	case 3:
+		printf("Enter Width of rectangle:\n");
+		scanf_s("%f", width);
+		printf("Enter height of rectangle:\n");
+		scanf_s("%f", height);
+		area = width*height;
+		printf("Area=%f", area);
+		break;
+	case 4:
+		printf("Enter base of Parallelogram:\n");
+		scanf_s("%f", &base);
+		printf("Enter height of Parallelogram:\n");
+		scanf_s("%f", &height);
+		area = base*height;
+		printf("Area=%f", area);
+		break;
+	case 5:
+		printf("Enter height of Trapezoid:\n");
+		scanf_s("%f", &height);
+		printf("Enter a:\n");
+		scanf_s("%f", &a);
+		printf("Enter b:\n");
+		scanf_s("%f", b);
+		area = 0.5*(a + b)*height;
+		printf("Area=%f", area);
+		break;
+	case 6:
+		printf("Enter Radius of circle:\n");
+		scanf_s("%f", &radius);
+		area = 3.124*radius*radius;
+		printf("Area=%f", area);
+		break;
+	case 7:
+		printf("enter a:\n");
+		scanf_s("%f", a);
+		printf("enter b:\n");
+		scanf_s("%f", b);
+		area = 3.124*a*b;
+		printf("Area=%f", area);
+		break;
+	case 8:
+		printf("enter radius:\n");
+		scanf_s("%f", radius);
+		printf("enter angle in radians:\n");
+		scanf_s("%f", angleInRadians);
+		area = radius*radius*angleInRadians;
+		printf("Area=%f", area);
+		break;
+	}
+
+}
